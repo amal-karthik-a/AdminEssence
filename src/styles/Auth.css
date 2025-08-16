@@ -1,0 +1,521 @@
+/* Coco Virgin Oil Admin Auth Styles */
+.coco-auth-container {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #f0fdfa 100%);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Background Elements */
+.coco-background-elements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.coco-floating-element {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  transition: transform 0.1s ease-out;
+}
+
+.coco-element-1 {
+  top: 80px;
+  left: 40px;
+  width: 128px;
+  height: 128px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  animation: coco-float 6s ease-in-out infinite;
+}
+
+.coco-element-2 {
+  top: 160px;
+  right: 80px;
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, #bbf7d0 0%, #6ee7b7 100%);
+  opacity: 0.3;
+  animation: coco-float-delayed 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.coco-element-3 {
+  bottom: 128px;
+  left: 25%;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #a7f3d0 0%, #67e8f9 100%);
+  opacity: 0.15;
+  animation: coco-float-slow 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.coco-element-4 {
+  bottom: 80px;
+  right: 33%;
+  width: 112px;
+  height: 112px;
+  background: linear-gradient(135deg, #d9f99d 0%, #86efac 100%);
+  opacity: 0.25;
+  animation: coco-float 6s ease-in-out infinite;
+}
+
+.coco-leaf {
+  position: absolute;
+  color: #10b981;
+  opacity: 0.3;
+  transition: transform 0.1s ease-out;
+}
+
+.coco-leaf-1 {
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  animation: coco-spin-slow 20s linear infinite;
+}
+
+.coco-leaf-2 {
+  top: 75%;
+  right: 25%;
+  transform: translate(50%, 50%);
+  color: #059669;
+  opacity: 0.4;
+  animation: coco-bounce-slow 4s ease-in-out infinite;
+}
+
+.coco-leaf-3 {
+  top: 50%;
+  left: 16.67%;
+  color: #0d9488;
+  opacity: 0.2;
+  animation: coco-pulse-slow 3s ease-in-out infinite;
+}
+
+/* Main Content */
+.coco-main-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.coco-auth-wrapper {
+  width: 100%;
+  max-width: 448px;
+}
+
+/* Brand Section */
+.coco-brand-section {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: coco-fade-in 1s ease-out;
+}
+
+.coco-logo-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  color: white;
+}
+
+.coco-brand-title {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.coco-brand-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Auth Card */
+.coco-auth-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  animation: coco-slide-up 0.8s ease-out;
+}
+
+.coco-card-header {
+  text-align: center;
+  padding: 24px 24px 0;
+}
+
+.coco-shield-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  color: white;
+}
+
+.coco-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.coco-card-description {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Form Styles */
+.coco-card-content {
+  padding: 0 24px 24px;
+}
+
+.coco-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.coco-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coco-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.coco-input-wrapper {
+  position: relative;
+}
+
+.coco-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  z-index: 2;
+}
+
+.coco-form-input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  padding-left: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.coco-password-input {
+  padding-right: 44px;
+}
+
+.coco-form-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  transform: translateY(-1px);
+}
+
+.coco-password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coco-password-toggle:hover {
+  color: #6b7280;
+}
+
+/* Form Options */
+.coco-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.coco-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.coco-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #10b981;
+}
+
+.coco-checkbox-text {
+  color: #6b7280;
+}
+
+.coco-forgot-link {
+  color: #10b981;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.coco-forgot-link:hover {
+  color: #059669;
+}
+
+/* Submit Button */
+.coco-submit-btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.coco-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.coco-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.coco-btn-text {
+  display: block;
+}
+
+.coco-loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.coco-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: coco-spin 1s linear infinite;
+}
+
+/* Security Notice */
+.coco-security-notice {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.coco-security-notice p {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Footer */
+.coco-footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 14px;
+  color: #9ca3af;
+  animation: coco-fade-in 1s ease-out 0.5s both;
+}
+
+.coco-footer p:first-child {
+  margin-bottom: 4px;
+}
+
+/* Animations */
+@keyframes coco-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes coco-float-delayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-3deg);
+  }
+}
+
+@keyframes coco-float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes coco-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coco-bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes coco-pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes coco-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes coco-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes coco-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .coco-main-content {
+    padding: 16px;
+  }
+
+  .coco-auth-wrapper {
+    max-width: 100%;
+  }
+
+  .coco-brand-title {
+    font-size: 28px;
+  }
+
+  .coco-floating-element {
+    opacity: 0.1;
+  }
+
+  .coco-element-1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .coco-element-2 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coco-element-3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .coco-element-4 {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Custom Scrollbar */
+.coco-auth-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.coco-auth-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.coco-auth-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #10b981, #059669);
+  border-radius: 3px;
+}
+
+.coco-auth-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #059669, #047857);
+}

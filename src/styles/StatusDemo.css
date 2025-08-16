@@ -1,0 +1,100 @@
+.demo-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 2rem;
+}
+
+.demo-content {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.demo-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.demo-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.demo-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.demo-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-btn-offline {
+  background-color: #ef4444;
+  color: white;
+}
+
+.demo-btn-offline:hover {
+  background-color: #dc2626;
+}
+
+.demo-btn-online {
+  background-color: #16a34a;
+  color: white;
+}
+
+.demo-btn-online:hover {
+  background-color: #15803d;
+}
+
+.demo-status {
+  display: flex;
+  justify-content: center;
+}
+
+.demo-status-indicator {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.demo-status-online {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.demo-status-offline {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+@media (max-width: 640px) {
+  .demo-container {
+    padding: 1rem;
+  }
+
+  .demo-title {
+    font-size: 1.875rem;
+  }
+
+  .demo-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}

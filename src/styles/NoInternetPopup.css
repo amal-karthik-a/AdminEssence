@@ -1,0 +1,278 @@
+/* Network Error Component Styles */
+.network-error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.network-error-container {
+  position: relative;
+  margin: 0 1rem;
+  width: 100%;
+  max-width: 28rem;
+  transform: scale(1);
+  animation: networkErrorFadeIn 0.3s ease-out;
+}
+
+@keyframes networkErrorFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.network-error-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.network-error-header {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  padding: 1.5rem;
+}
+
+.network-error-header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.network-error-icon-wrapper {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+}
+
+.network-error-wifi-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+}
+
+.network-error-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.network-error-subtitle {
+  font-size: 0.875rem;
+  color: rgba(254, 226, 226, 1);
+  margin: 0;
+}
+
+.network-error-content {
+  padding: 1.5rem;
+}
+
+.network-error-message {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.network-error-alert-icon-wrapper {
+  margin: 0 auto 1rem auto;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(254, 242, 242, 1);
+}
+
+.network-error-alert-icon {
+  height: 2rem;
+  width: 2rem;
+  color: #ef4444;
+}
+
+.network-error-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+.network-error-status {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.network-error-status-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  padding: 0.75rem;
+}
+
+.network-error-status-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.network-error-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+}
+
+.network-error-dot-red {
+  background-color: #ef4444;
+}
+
+.network-error-dot-yellow {
+  background-color: #eab308;
+}
+
+.network-error-status-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.network-error-status-value {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.network-error-status-offline {
+  color: #dc2626;
+}
+
+.network-error-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.network-error-retry-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #16a34a;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.network-error-retry-btn:hover {
+  background-color: #15803d;
+}
+
+.network-error-retry-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #16a34a, 0 0 0 4px rgba(22, 163, 74, 0.2);
+}
+
+.network-error-retry-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.network-error-retry-btn-loading {
+  opacity: 0.8;
+}
+
+.network-error-refresh-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.network-error-spin {
+  animation: networkErrorSpin 1s linear infinite;
+}
+
+@keyframes networkErrorSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.network-error-dismiss-btn {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #374151;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.network-error-dismiss-btn:hover {
+  background-color: #f9fafb;
+}
+
+.network-error-dismiss-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #6b7280, 0 0 0 4px rgba(107, 114, 128, 0.2);
+}
+
+.network-error-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.network-error-decoration-top {
+  top: -0.5rem;
+  right: -0.5rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: #ef4444;
+  opacity: 0.6;
+}
+
+.network-error-decoration-bottom {
+  bottom: -0.5rem;
+  left: -0.5rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #16a34a;
+  opacity: 0.4;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .network-error-container {
+    margin: 0 0.5rem;
+  }
+
+  .network-error-header {
+    padding: 1rem;
+  }
+
+  .network-error-content {
+    padding: 1rem;
+  }
+}

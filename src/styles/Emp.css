@@ -1,0 +1,165 @@
+.employee-management-container {
+  padding: 24px;
+  background-color: #f9fafb; /* Light gray background */
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937; /* Dark gray */
+}
+
+.header-subtitle {
+  color: #6b7280; /* Medium gray */
+}
+
+.employees-section, .admins-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937; /* Dark gray */
+  margin-bottom: 16px;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.employee-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.employee-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.employee-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937; /* Dark gray */
+}
+
+.employee-role {
+  color: #6b7280; /* Medium gray */
+}
+
+.employee-email {
+  font-size: 12px;
+  color: #9ca3af; /* Light gray */
+}
+
+.employee-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view {
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+  background-color: #2563eb; /* Darker blue */
+}
+
+.btn-remove {
+  background-color: #ef4444; /* Red */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+  background-color: #dc2626; /* Darker red */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #6b7280; /* Medium gray */
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.modal-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151; /* Darker gray */
+}
+
+.modal-text {
+  margin-top: 4px;
+  color: #1f2937; /* Dark gray */
+}
+
+.modal-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-close {
+  background-color: #6b7280; /* Medium gray */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+  background-color: #4b5563; /* Darker gray */
+}
